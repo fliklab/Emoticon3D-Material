@@ -1,14 +1,31 @@
-@import '~react-md/src/scss/react-md';
-$md-primary-color: $md-grey-400;
-$md-secondary-color: $md-red-800;
-$md-tertiary-color: $md-grey-300;
+@import "~react-md/src/scss/react-md";
+$md-primary-color: $md-red-700;
+$md-secondary-color: $md-light-blue-500;
+$md-tertiary-color: $md-purple-a-100;
 
 .main-container,
 .darker-background {
-    background-color: $md-tertiary-color;
+  background-color: $md-tertiary-color;
 }
 
 a:link {
-    color: $md-secondary-color;
-    text-decoration: none;
+  color: $md-secondary-color;
+  text-decoration: none;
 }
+
+// .bottom-navigations__dynamic__content {
+//   padding-top: $md-toolbar-mobile-portrait-height;
+
+//   @media #{$md-tablet-media} {
+//     padding-top: $phone-emulator-status-bar-height + $md-toolbar-mobile-portrait-height;
+//   }
+
+//   &--inset {
+//     $toolbar-offset: $md-toolbar-mobile-portrait-height + ($md-toolbar-inset-margin * 18);
+//     padding-top: $toolbar-offset;
+
+//     @media #{$md-tablet-media} {
+//       padding-top: $toolbar-offset + $phone-emulator-status-bar-height;
+//     }
+//   }
+// }
