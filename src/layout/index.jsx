@@ -60,9 +60,9 @@ export default class MainLayout extends React.Component {
           <BottomNavigation
             links={navLinks} //클릭하면 navLinks에서 정의한 link로 이동합니다.
             dynamic={false}
-            onNavChange={activeIndex => {
+            onNavChange={atlassian => {
               //클릭할때 실행되는 javascript구문
-              switch (activeIndex) {
+              switch (atlassian) {
                 case 1:
                   //alert('hey');
                   break;
