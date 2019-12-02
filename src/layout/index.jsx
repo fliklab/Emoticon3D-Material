@@ -8,23 +8,44 @@ import Navigation from '../components/Navigation';
 import config from '../../data/SiteConfig';
 import './index.scss';
 import './global.scss';
+import { Link } from '@reach/router';
 
-const Favorites = () => <div>안녕</div>;
+const TO_PREFIX = '';
 
+//navLinks에 항목을 추가/수정하면 하단바에도 적용됩니다.
 const navLinks = [
   {
     label: '모델검색',
-    icon: <FontIcon>search</FontIcon>
+    icon: <FontIcon>search</FontIcon>,
+    to: TO_PREFIX,
+    component: Link
   },
   {
     label: '내3D모델',
-    icon: <FontIcon>favorite</FontIcon>
+    icon: <FontIcon>favorite</FontIcon>,
+    to: `${TO_PREFIX}/about`,
+    component: Link
   },
   {
     label: '예약하기',
-    icon: <FontIcon>place</FontIcon>
+    icon: <FontIcon>place</FontIcon>,
+    to: `${TO_PREFIX}/about2`,
+    component: Link
+  },
+  {
+    label: '예약하기',
+    icon: <FontIcon>asterisk</FontIcon>,
+    to: `${TO_PREFIX}/about2`,
+    component: Link
+  },
+  {
+    label: '예약하기',
+    icon: <FontIcon>place</FontIcon>,
+    to: `${TO_PREFIX}/about2`,
+    component: Link
   }
 ];
+//아이콘은 여기서 https://fontawesome.com/icons?d=gallery
 
 export default class MainLayout extends React.Component {
   render() {
@@ -37,25 +58,22 @@ export default class MainLayout extends React.Component {
           </Helmet>
           {children}
           <BottomNavigation
-            links={navLinks}
-            dynamic={}
+            links={navLinks} //클릭하면 navLinks에서 정의한 link로 이동합니다.
+            dynamic={false}
             onNavChange={activeIndex => {
-              //const title = {links[activeIndex]? links[activeIndex].label:"임의제목"};
-              const title = '임의의제목';
-
-              let children;
+              //클릭할때 실행되는 javascript구문
               switch (activeIndex) {
                 case 1:
-                  children = <Favorites key='about' />;
+                  //alert('hey');
                   break;
                 case 2:
-                  children = <Favorites key='about' />;
+                  //alert('hey-2');
                   break;
                 default:
-                  children = <Favorites key='about' />;
+                //alert('hey-3');
               }
 
-              this.setState({ title, children });
+              // this.setState({ title, children });
             }}
           />
         </div>
