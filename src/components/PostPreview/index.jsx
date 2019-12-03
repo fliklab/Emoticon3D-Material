@@ -37,6 +37,7 @@ class PostPreview extends Component {
       this.setState({ mobile: true });
     }
   }
+
   render() {
     const { postInfo } = this.props;
     const { mobile } = this.state;
