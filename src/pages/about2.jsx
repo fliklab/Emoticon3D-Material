@@ -4,9 +4,9 @@ import Card from 'react-md/lib/Cards/Card';
 import CardText from 'react-md/lib/Cards/CardText';
 import Helmet from 'react-helmet';
 import UserLinks from '../components/UserLinks';
-
 import Layout from '../layout';
 import config from '../../data/SiteConfig';
+import './About.scss';
 
 class AboutPage2 extends Component {
   render() {

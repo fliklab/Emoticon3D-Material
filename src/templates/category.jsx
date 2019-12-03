@@ -1,9 +1,9 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import PostListing from "../components/PostListing";
-import Layout from "../layout";
-import config from "../../data/SiteConfig";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import PostListing from '../components/PostListing';
+import Layout from '../layout';
+import config from '../../data/SiteConfig';
 
 export default class CategoryTemplate extends React.Component {
   render() {
@@ -12,15 +12,14 @@ export default class CategoryTemplate extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={category.charAt(0).toUpperCase() + category.slice(1)}
+        title={'MY 콜랙션'}
+        //title={category.charAt(0).toUpperCase() + category.slice(1)}
       >
-        <div className="category-container">
+        <div className='category-container'>
           <Helmet>
-            <title>
-              {`Posts in category "${category}" | ${config.siteTitle}`}
-            </title>
+            <title>{`MY 콜랙션 - "${category}" | ${config.siteTitle}`}</title>
             <link
-              rel="canonical"
+              rel='canonical'
               href={`${config.siteUrl}/categories/${category}`}
             />
           </Helmet>
