@@ -1,0 +1,31 @@
+@import "../../layout/theme.scss";
+
+.footer {
+  justify-content: center;
+  align-content: center;
+  background-color: $md-primary-color;
+  padding: 0px 0px;
+  position: fixed;
+  bottom: 0;
+  height: 90px;
+
+  .boxes-container {
+    display: flex;
+    align-content: center;
+    flex-wrap: no-wrap;
+    align-items: space-between;
+    margin-top: 0px;
+    width: 100%;
+
+    .user-button {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      p {
+        color: #444444;
+      }
+      height: 84px;
+      width: 20%;
+    }
+  }
+}

@@ -3,12 +3,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import 'font-awesome/scss/font-awesome.scss';
 import { Link } from '@reach/router';
-import { BottomNavigation, FontIcon } from 'react-md';
+import { FontIcon } from 'react-md';
 
 import Navigation from '../components/Navigation';
 import config from '../../data/SiteConfig';
 import './index.scss';
 import './global.scss';
+
+import BottomNav from '../components/BottomNav';
 
 const TO_PREFIX = '';
 
@@ -57,36 +59,7 @@ export default class MainLayout extends React.Component {
             <meta name='description' content={config.siteDescription} />
           </Helmet>
           {children}
-          <BottomNavigation
-            labelAndIcon
-            fixed
-            links={navLinks} //클릭하면 navLinks에서 정의한 link로 이동합니다.
-            dynamic={false}
-            // (props,propName,component,...args)=> {constlinks=props[propName]||props.actions;constlen=links.length;if(len<5){
-            //   return newError(`Only${len}\`${propName}\`weregiventothe${component}.Atleast3arerequired.`);
-            // }
-            //   elseif(len>5){
-            //     return newError(`${len}\`${propName}\`weregiventothe${component}.Nomorethan5maybegiven.`
-            //     );
-
-            // }returnPropTypes.arrayOf(PropTypes.shape({label:PropTypes.node.isRequired,icon:PropTypes.element,iconChildren:deprecated(PropTypes.node)
-
-            onNavChange={atlassian => {
-              //클릭할때 실행되는 javascript구문
-              switch (atlassian) {
-                case 1:
-                  //alert('hey');
-                  break;
-                case 2:
-                  //alert('hey-2');
-                  break;
-                default:
-                //alert('hey-3');
-              }
-
-              //this.setState({ title, children });
-            }}
-          />
+          <BottomNav />
         </div>
       </Navigation>
     );
