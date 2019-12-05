@@ -7,13 +7,13 @@ $phone-status-bar-height: 24px - 12px;
     align-items: center;
 }
 
-.post-overlap {
-    margin-top: -80px !important;
+.post-overlap { //상세페이지에서 게시물 본문과 상단 이미지의 간격 조절
+    margin-top: -15px !important;
     z-index: 2;
 }
 
 .post-overlap-mobile {
-    margin-top: -20px !important;
+    margin-top: -5px !important;
     z-index: 2;
 }
 
@@ -38,7 +38,7 @@ $phone-status-bar-height: 24px - 12px;
         margin: 0;
         max-width: 100%;
         word-wrap: break-word;
-        white-space: normal;
+        white-space: normal;        
     }
 
     .post {
