@@ -9,61 +9,57 @@ class BottomNav extends Component {
     return (
       <footer className='footer footer-fixed'>
         <div className='boxes-container'>
-          <div className='user-button'>
-            <Button
-              icon='fa-home'
-              flat='true'
-              secondary
-              key='about'
-              iconClassName='fa fa-home'
-              href='/about'
-            >
-              <p>반갑다</p>
-            </Button>
-            <Button
-              icon='fa-beer'
-              flat='true'
-              secondary
-              key='menu1'
-              iconClassName='fa fa-heart'
-              href='/about2'
-            >
-              <p>친구야</p>
-            </Button>
+          <Button
+            className='user-button'
+            icon='fa-home'
+            secondary
+            key='about'
+            iconClassName='fa fa-home'
+            href='/'
+          >
+            <p>반갑다</p>
+          </Button>
+          <Button
+            className='user-button'
+            icon='fa-beer'
+            secondary
+            key='menu1'
+            iconClassName='fa fa-heart'
+            href='/about'
+          >
+            <p>친구야</p>
+          </Button>
 
-            <Button
-              icon='faHome' // ??
-              flat='false'
-              secondary
-              key='√variable-md-colors-warn'
-              iconClassName='fa fa-comment'
-              href='/reserve'
-            >
-              <p>일요일은</p>
-            </Button>
-
-            <Button
-              icon='faHome' // ??
-              flat='false'
-              secondary
-              key='menu3'
-              iconClassName='fa fa-book'
-              href='/'
-            >
-              <p>제발좀</p>
-            </Button>
-
-            <Button
-              icon='faHome' // ???
-              flat='false'
-              secondary
-              key='menu4'
-              iconClassName='fa fa-tag'
-              href='/'
-            >
-              <p>쉬게해줘</p>
-            </Button>
-          </div>
+          <Button
+            className='user-button'
+            icon='faHome' // ??
+            secondary
+            key='variable-md-colors-warn'
+            iconClassName='fa fa-comment'
+            href='/ThisIsNotAbout/about2'
+          >
+            <p>일요일은</p>
+          </Button>
+          <Button
+            className='user-button'
+            icon='faHome' // ??
+            secondary
+            key='menu3'
+            iconClassName='fa fa-book'
+            href='/the-butterfly-of-the-edge'
+          >
+            <p>제발좀</p>
+          </Button>
+          <Button
+            className='user-button'
+            icon='faHome' // ???
+            secondary
+            key='menu4'
+            iconClassName='fa fa-tag'
+            href='/introducing-gatsby-material-starter'
+          >
+            <p>쉬게해줘</p>
+          </Button>
         </div>
       </footer>
     );

@@ -4,7 +4,7 @@
 
 <div align="center">
     <img src="docs/logo.png" alt="Logo" width='200px' height='200px'/>
-</div>
+</div
 
 # Gatsby Material Starter
 
