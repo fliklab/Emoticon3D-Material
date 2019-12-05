@@ -15,7 +15,7 @@ class BottomNav extends Component {
             secondary
             key='about'
             iconClassName='fa fa-home'
-            href='/'
+            href='/Emoticon3D-Material/'
           >
             <p>반갑다</p>
           </Button>
@@ -25,7 +25,7 @@ class BottomNav extends Component {
             secondary
             key='menu1'
             iconClassName='fa fa-heart'
-            href='/about'
+            href='/Emoticon3D-Material/about'
           >
             <p>친구야</p>
           </Button>
@@ -36,7 +36,7 @@ class BottomNav extends Component {
             secondary
             key='variable-md-colors-warn'
             iconClassName='fa fa-comment'
-            href='/ThisIsNotAbout/about2'
+            href='/Emoticon3D-Material/ThisIsNotAbout/about2'
           >
             <p>일요일은</p>
           </Button>
@@ -46,7 +46,7 @@ class BottomNav extends Component {
             secondary
             key='menu3'
             iconClassName='fa fa-book'
-            href='/the-butterfly-of-the-edge'
+            href='/Emoticon3D-Material/the-butterfly-of-the-edge'
           >
             <p>제발좀</p>
           </Button>
@@ -56,7 +56,7 @@ class BottomNav extends Component {
             secondary
             key='menu4'
             iconClassName='fa fa-tag'
-            href='/introducing-gatsby-material-starter'
+            href='/Emoticon3D-Material/-gatsby-material-starter'
           >
             <p>쉬게해줘</p>
           </Button>
