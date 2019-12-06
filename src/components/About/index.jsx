@@ -20,7 +20,6 @@ class About extends Component {
               <p className='about-text md-body-1'>카드텍스트</p>
               <p className='about-text md-body-1'>{config.userDescription}</p>
             </CardText>
-            <UserLinks labeled config={config} />
           </div>
         </Card>
       </div>

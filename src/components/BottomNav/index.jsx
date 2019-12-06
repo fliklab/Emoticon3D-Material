@@ -15,7 +15,7 @@ class BottomNav extends Component {
             secondary
             key='about'
             iconClassName='fa fa-home'
-            href='/'
+            href={`${config.pathPrefix}`}
           >
             <p>반갑다</p>
           </Button>
