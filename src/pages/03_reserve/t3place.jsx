@@ -1,41 +1,41 @@
-import React, { Component } from 'react';
-import Helmet from 'react-helmet';
+import React, { Component } from "react";
+import Helmet from "react-helmet";
 // import { randomImage } from "utils/random";
 
-import { Avatar, Card, CardTitle, CardText } from 'react-md';
-import Layout from '../layout';
-import config from '../../data/SiteConfig';
+import { Avatar, Card, CardTitle, CardText } from "react-md";
+import Layout from "../../layout";
+import config from "../../../data/SiteConfig";
 
 // 태그 안에서 (예)<div style = {styles._____}> 로 지정해주면 됩니다..
 const styles = {
   card: {
-    display: 'flex',
-    direction: 'row',
-    justifyContent: 'space-between',
+    display: "flex",
+    direction: "row",
+    justifyContent: "space-between",
     // height: 160,
-    padding: '0em 0em 0.8em 0.8em', //위 오른쪽 아래 왼쪽(시계방향)
-    borderBottom: '1px solid lightgray',
-    margin: '0 0 0 0'
+    padding: "0em 0em 0.8em 0.8em", //위 오른쪽 아래 왼쪽(시계방향)
+    borderBottom: "1px solid lightgray",
+    margin: "0 0 0 0"
   },
   leftBox: {
-    display: 'flex',
+    display: "flex",
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'baseline'
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "baseline"
   },
   title: {
-    paddingTop: '0em',
-    paddingBottom: '0em',
-    fontSize: '1.1em',
-    textAlign: 'left',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    width: '100%',
-    maxHeight: '2.8em',
-    whiteSpace: 'normal',
-    boxOrient: 'hrizontal',
-    display: 'box'
+    paddingTop: "0em",
+    paddingBottom: "0em",
+    fontSize: "1.1em",
+    textAlign: "left",
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    width: "100%",
+    maxHeight: "2.8em",
+    whiteSpace: "normal",
+    boxOrient: "hrizontal",
+    display: "box"
 
     /* 여러 줄 자르기 추가 스타일 */
     // white-space: normal;
@@ -48,17 +48,17 @@ const styles = {
     // -webkit-box-orient: vertical;
   },
   thumbnail: {
-    display: 'flex',
-    direction: 'row',
-    alignSelf: 'center',
+    display: "flex",
+    direction: "row",
+    alignSelf: "center",
     marginLeft: 4,
     width: 84,
     height: 84
   },
   info: {
-    display: 'flex',
-    direction: 'column',
-    textAlign: 'left',
+    display: "flex",
+    direction: "column",
+    textAlign: "left",
     height: 10
   }
 };
@@ -87,7 +87,7 @@ class Place extends Component {
         <div className='about-container'>
           <Helmet>
             <title>{`place | ${config.siteTitle}`}</title>
-            <link rel='canonical' href={`${config.siteUrl}/t3place`} />
+            <link rel='canonical' href={`${config.siteUrl}/place`} />
           </Helmet>
           <div>
             <Card className='md-grid md-cell--8'>
@@ -95,7 +95,7 @@ class Place extends Component {
                 name='이모티콘3D 메이커스페이스'
                 info1='유료∙교육 필요'
                 info2='동작구'
-                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+                img={`${config.siteUrl}/test/tester.png`}
               />
               <PlaceCard
                 name='팹랩서울'

@@ -10,9 +10,9 @@ body {
   margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Material+Icons');
-@import '~react-md/src/scss/react-md';
-@import 'theme.scss';
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700|Material+Icons");
+@import "~react-md/src/scss/react-md";
+@import "theme.scss";
 
 $md-bottom-navigation-max-width: 120px;
 $md-bottom-navigation-width: 10px;
