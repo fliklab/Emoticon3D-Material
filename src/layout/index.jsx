@@ -2,6 +2,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import 'font-awesome/scss/font-awesome.scss';
+import { Link } from '@reach/router';
+import { FontIcon } from 'react-md';
 
 import Navigation from '../components/Navigation';
 import config from '../../data/SiteConfig';
@@ -10,8 +12,14 @@ import './global.scss';
 
 import BottomNav from '../components/BottomNav';
 
-// navLinks에 항목을 추가/수정하면 하단바에도 적용됩니다.
-//아이콘은 여기서 https://fontawesome.com/icons?d=gallery
+const styles = {
+  topBlank: {
+    height: '10px'
+  },
+  bottomBlank: {
+    height: '70px'
+  }
+};
 
 export default class MainLayout extends React.Component {
   render() {
@@ -22,7 +30,9 @@ export default class MainLayout extends React.Component {
           <Helmet>
             <meta name='description' content={config.siteDescription} />
           </Helmet>
+          <div style={styles.topBlank} />
           {children}
+          <div style={styles.bottomBlank} />
           <BottomNav />
         </div>
       </Navigation>
