@@ -15,7 +15,7 @@ class BottomNav extends Component {
             secondary
             key='about'
             iconClassName='fa fa-home'
-            href={`${config.pathPrefix}`}
+            href='/'
           >
             <p>반갑다</p>
           </Button>
@@ -25,7 +25,8 @@ class BottomNav extends Component {
             secondary
             key='menu1'
             iconClassName='fa fa-heart'
-            href={`${config.pathPrefix}/about`}
+            href='/about'
+            // href={`${config.pathPrefix}/about`}
           >
             <p>친구야</p>
           </Button>
@@ -36,9 +37,9 @@ class BottomNav extends Component {
             secondary
             key='variable-md-colors-warn'
             iconClassName='fa fa-comment'
-            href={`${config.pathPrefix}/ThisIsNotAbout/about2`}
+            href='/t3place'
           >
-            <p>일요일은</p>
+            <p>장소검색</p>
           </Button>
           <Button
             className='user-button'
@@ -46,7 +47,7 @@ class BottomNav extends Component {
             secondary
             key='menu3'
             iconClassName='fa fa-book'
-            href={`${config.pathPrefix}/the-butterfly-of-the-edge`}
+            href='/about'
           >
             <p>제발좀</p>
           </Button>
@@ -56,7 +57,7 @@ class BottomNav extends Component {
             secondary
             key='menu4'
             iconClassName='fa fa-tag'
-            href={`${config.pathPrefix}/gatsby-material-starter`}
+            href='/about'
           >
             <p>쉬게해줘</p>
           </Button>
