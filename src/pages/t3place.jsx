@@ -13,7 +13,7 @@ const styles = {
     direction: 'row',
     justifyContent: 'space-between',
     // height: 160,
-    padding: '0em 0em 0.8em 0.8em', //위아래여백 , 좌우여백
+    padding: '0em 0em 0.8em 0.8em', //위 오른쪽 아래 왼쪽(시계방향)
     borderBottom: '1px solid lightgray',
     margin: '0 0 0 0'
   },
@@ -66,18 +66,16 @@ const styles = {
 const PlaceCard = props => {
   const { name, info1, info2, img } = props;
   return (
-    <Card className='md-grid md-cell--8'>
-      <div style={styles.card}>
-        <div style={styles.leftBox}>
-          <p style={styles.title}>{name}</p>
-          <div>
-            <p style={styles.info}>{info1}</p>
-            <p style={styles.info}>{info2}</p>
-          </div>
+    <div style={styles.card}>
+      <div style={styles.leftBox}>
+        <p style={styles.title}>{name}</p>
+        <div>
+          <p style={styles.info}>{info1}</p>
+          <p style={styles.info}>{info2}</p>
         </div>
-        <img style={styles.thumbnail} alt='장소 이미지' src={img} />
       </div>
-    </Card>
+      <img style={styles.thumbnail} alt='장소 이미지' src={img} />
+    </div>
   );
 };
 
@@ -92,48 +90,50 @@ class Place extends Component {
             <link rel='canonical' href={`${config.siteUrl}/t3place`} />
           </Helmet>
           <div>
-            <PlaceCard
-              name='이모티콘3D 메이커스페이스'
-              info1='유료∙교육 필요'
-              info2='동작구'
-              img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
-            />
-            <PlaceCard
-              name='팹랩서울'
-              info1='유료∙info1'
-              info2='종로구'
-              img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
-            />
-            <PlaceCard
-              name='디지털대장간'
-              info1='유료∙info1'
-              info2='용산구'
-              img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
-            />
-            <PlaceCard
-              name='새 장소'
-              info1='유료∙교육 필수 '
-              info2='지역'
-              img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
-            />
-            <PlaceCard
-              name='새 장소'
-              info1='유료∙교육 필수 '
-              info2='지역'
-              img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
-            />
-            <PlaceCard
-              name='새 장소'
-              info1='유료∙교육 필수 '
-              info2='지역'
-              img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
-            />
-            <PlaceCard
-              name='새 장소'
-              info1='유료∙교육 필수 '
-              info2='지역'
-              img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
-            />
+            <Card className='md-grid md-cell--8'>
+              <PlaceCard
+                name='이모티콘3D 메이커스페이스'
+                info1='유료∙교육 필요'
+                info2='동작구'
+                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+              />
+              <PlaceCard
+                name='팹랩서울'
+                info1='유료∙info1'
+                info2='종로구'
+                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+              />
+              <PlaceCard
+                name='디지털대장간'
+                info1='유료∙info1'
+                info2='용산구'
+                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+              />
+              <PlaceCard
+                name='새 장소'
+                info1='유료∙교육 필수 '
+                info2='지역'
+                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+              />
+              <PlaceCard
+                name='새 장소'
+                info1='유료∙교육 필수 '
+                info2='지역'
+                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+              />
+              <PlaceCard
+                name='새 장소'
+                info1='유료∙교육 필수 '
+                info2='지역'
+                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+              />
+              <PlaceCard
+                name='새 장소'
+                info1='유료∙교육 필수 '
+                info2='지역'
+                img='http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg'
+              />
+            </Card>
           </div>
         </div>
       </Layout>
