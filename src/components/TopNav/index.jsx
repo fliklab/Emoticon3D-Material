@@ -16,7 +16,7 @@ const styles = {
   },
   content: {
     flex: 1,
-    width: "480px"
+    width: "500px"
   }
 };
 

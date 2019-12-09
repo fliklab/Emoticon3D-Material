@@ -33,7 +33,7 @@ class Index extends React.Component {
         <div className='index-container' style={styles.content}>
           <Helmet>
             <title>{config.siteTitle}</title>
-            <link rel='canonical' href={`${config.siteUrl}`} />
+            <link rel='canonical' href={`${config.siteUrl}/pageindex`} />
           </Helmet>
           <SEO postEdges={postEdges} />
           <PostListing postEdges={postEdges} />

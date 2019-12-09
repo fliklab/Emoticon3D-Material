@@ -12,7 +12,7 @@ class MainPage extends Component {
       <div className='about-container'>
         <Helmet>
           <title>{`main | ${config.siteTitle}`}</title>
-          <link rel='canonical' href={`${config.siteUrl}/main/`} />
+          <link rel='canonical' href={`${config.siteUrl}`} />
         </Helmet>
         <div>
           <Card className='md-grid md-cell--8'>

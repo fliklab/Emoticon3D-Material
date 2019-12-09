@@ -3,88 +3,120 @@ import Helmet from "react-helmet";
 // import { randomImage } from "utils/random";
 
 import { Avatar, Card, CardTitle, CardText } from "react-md";
-import Layout from "../layout";
+import Layout from "../../layout";
 import config from "../../data/SiteConfig";
-const style = { Width: 900 };
+
+// 태그 안에서 (예)<div style = {styles._____}> 로 지정해주면 됩니다..
+const styles = {
+  card: {
+    display: "flex",
+    direction: "row",
+    justifyContent: "space-between",
+    // height: 160,
+    padding: "0em 0em 0.8em 0.8em", //위 오른쪽 아래 왼쪽(시계방향)
+    borderBottom: "1px solid lightgray",
+    margin: "0 0 0 0"
+  },
+  leftBox: {
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "baseline"
+  },
+  title: {
+    paddingTop: "0em",
+    paddingBottom: "0em",
+    fontSize: "1.1em",
+    textAlign: "left",
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    width: "100%",
+    maxHeight: "2.8em",
+    whiteSpace: "normal",
+    boxOrient: "hrizontal",
+    display: "box"
+
+    /* 여러 줄 자르기 추가 스타일 */
+    // white-space: normal;
+    // line-height: 1.2;
+    // height: 3.6em;
+    // text-align: left;
+    // word-wrap:  break-word;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 3;
+    // -webkit-box-orient: vertical;
+  },
+  thumbnail: {
+    display: "flex",
+    direction: "row",
+    alignSelf: "center",
+    marginLeft: 4,
+    width: 84,
+    height: 84
+  },
+  info: {
+    display: "flex",
+    direction: "column",
+    textAlign: "left",
+    height: 10
+  }
+};
+
+const PlaceCard = props => {
+  const { name, info1, info2, img } = props;
+  return (
+    <div style={styles.card}>
+      <div style={styles.leftBox}>
+        <p style={styles.title}>{name}</p>
+        <div>
+          <p style={styles.info}>{info1}</p>
+          <p style={styles.info}>{info2}</p>
+        </div>
+      </div>
+      <img style={styles.thumbnail} alt='장소 이미지' src={img} />
+    </div>
+  );
+};
+
 // const avatar = randomImage();
 class Place extends Component {
   render() {
     return (
-      <Layout title="장소 검색">
-        <div className="about-container">
+      <Layout title='⬅︎ 장소 검색'>
+        <div className='about-container'>
           <Helmet>
             <title>{`place | ${config.siteTitle}`}</title>
-            <link rel="canonical" href={`${config.siteUrl}/place`} />
+            <link rel='canonical' href={`/place`} />
+            {/*  href={`{`${config.siteUrl}/place`} */}
           </Helmet>
-          <div className="about-container md-grid mobile-fix">
-            <Card className="md-grid md-cell--8">
-              <div className="about-wrapper">
-                {/* <CardTitle
-                  title="Card Title"
-                  subtitle="Card Subtitle"
-                  avatar={<Avatar src={avatar} role="presentation" />}
-                /> */}
-                <CardText>
-                  <div className="md-grid">
-                    <Card
-                      style={style}
-                      className="md-cell md-paper md-paper--1"
-                    >
-                      <CardTitle title="이모티콘 메이커스페이스" />
-                      <img src="http://upload.wikimedia.org/wikipedia/en/f/f7/The_Phone_%28film%29_poster.jpeg" />
-                      <CardText>
-                        <p>교육 필수,무료 </p>
-                        <p>동작구 </p>
-                      </CardText>
-                    </Card>
-                  </div>
-
-                  <div className="md-grid">
-                    <Card
-                      style={style}
-                      className="md-cell md-paper md-paper--1"
-                    >
-                      <CardTitle title="중앙대 메이커스페이스" />
-                      <img
-                        src="logos/mainicon_256x256.png"
-                        className="about-img"
-                        alt={config.userName}
-                      />
-
-                      <CardText>
-                        <p>교육 필수 ,학생 및 교직원만 가능, 무료 </p>
-                        <p>동작구 </p>
-                      </CardText>
-                    </Card>
-                  </div>
-
-                  <div className="md-grid">
-                    <Card
-                      style={style}
-                      className="md-cell md-paper md-paper--1"
-                    >
-                      <CardTitle title="디지털 대장간" />
-                      <CardText>
-                        <p>교육 필수, 무료 </p>
-                        <p>용산구 </p>
-                      </CardText>
-                    </Card>
-                  </div>
-
-                  <div className="md-grid">
-                    <Card
-                      style={style}
-                      className="md-cell md-paper md-paper--1"
-                    >
-                      <CardTitle title="팹랩 서울" />
-                      <CardText>
-                        <p>교육 필수, 유료 </p>
-                        <p>종로구 </p>
-                      </CardText>
-                    </Card>
-                  </div>
-                </CardText>
-              </div>
+          <div>
+            <Card className='md-grid md-cell--8'>
+              <PlaceCard
+                name='이모티콘3D 메이커스페이스'
+                info1='유료∙교육 필요'
+                info2='동작구'
+                img={`../../assets/places/place_cau.png`}
+              />
+              <PlaceCard
+                name='팹랩서울'
+                info1='유료∙info1'
+                info2='종로구'
+                img={`./../assets/places/place_.fablabpng`}
+              />
+              <PlaceCard
+                name='디지털대장간'
+                info1='유료∙info1'
+                info2='용산구'
+                img={`../../assets/places/place_digital.png`}
+              />
+              <PlaceCard name='새 장소' info1='유료∙교육 필수 ' info2='지역' />
+              <PlaceCard
+                name='새 장소'
+                info1='유료∙교육 필수 '
+                info2='지역'
+                img={`${config.siteUrl}/places/place_makerspace.png`}
+              />
             </Card>
           </div>
         </div>
