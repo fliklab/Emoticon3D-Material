@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 800px;
 
   .about-img {
     border-radius: 50%;
@@ -9,18 +10,17 @@
     height: 100px;
     margin: 10px 0;
 
-    @media (max-width: 360px - 1px) {
-      padding: 20px;
-    }
+    // @media (max-width: 360px - 1px) {
+    //   padding: 20px;
+    // }
   }
-
   .about-text {
     max-width: 640px;
     margin: 20px 0 !important;
     color: red($color: #000000);
 
-    @media (max-width: 360px - 1px) {
-      margin: 5px 0 !important;
-    }
+    // @media (max-width: 360px - 1px) {
+    //   margin: 5px 0 !important;
+    // }
   }
 }

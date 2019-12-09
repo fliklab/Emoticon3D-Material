@@ -8,7 +8,7 @@ class PostTags extends Component {
   render() {
     const { tags } = this.props;
     return (
-      <div className="post-tag-container">
+      <div className='post-tag-container'>
         {tags &&
           tags.map(tag => (
             <Link
@@ -16,7 +16,7 @@ class PostTags extends Component {
               style={{ textDecoration: "none" }}
               to={`/tags/${_.kebabCase(tag)}`}
             >
-              <Chip label={tag} className="post-preview-tags" />
+              <Chip label={tag} className='post-preview-tags' />
             </Link>
           ))}
       </div>

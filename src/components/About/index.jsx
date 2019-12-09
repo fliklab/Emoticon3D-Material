@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Card from 'react-md/lib/Cards/Card';
-import CardText from 'react-md/lib/Cards/CardText';
-import UserLinks from '../UserLinks';
-import config from '../../../data/SiteConfig';
-import './About.scss';
+import React, { Component } from "react";
+import Card from "react-md/lib/Cards/Card";
+import CardText from "react-md/lib/Cards/CardText";
+import UserLinks from "../UserLinks";
+import config from "../../../data/SiteConfig";
+import "./About.scss";
 
 class About extends Component {
   render() {

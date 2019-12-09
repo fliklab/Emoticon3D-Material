@@ -35,11 +35,7 @@ export default class PostTemplate extends React.Component {
   }
 
   handleResize() {
-    if (window.innerWidth >= 640) {
-      this.setState({ mobile: false });
-    } else {
-      this.setState({ mobile: true });
-    }
+    this.setState({ mobile: true });
   }
 
   render() {
@@ -59,7 +55,7 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
 
-    const coverHeight = mobile ? 180 : 350;
+    const coverHeight = 400;
     return (
       <Layout location={location}>
         <div className='post-page md-grid md-grid--no-spacing'>

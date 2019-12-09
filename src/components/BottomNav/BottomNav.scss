@@ -1,16 +1,16 @@
-@import '../../layout/theme.scss';
+@import "../../layout/theme.scss";
 
 .footer {
   display: flex;
   direction: row;
   justify-content: center;
   align-items: center;
-  background-color: $md-primary-color;
+  background-color: rgb(245, 245, 245);
   padding: 0px;
   margin: 0px;
   position: fixed;
   bottom: 0;
-  height: 60px;
+  height: 70px;
   box-shadow: 0 0 0.5em #555;
 }
 
@@ -18,34 +18,48 @@
   //border: solid 2px red;
   display: flex;
   direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   // justify-content: space-around;
   // justify-content: space-between;
   align-items: center;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
 
-  padding: 0px;
+  padding-top: 6px;
   margin: 0px;
   width: 100%;
-  height: 60px;
+  height: 70px;
 
-  .user-button {
+  .buttons {
     //border: solid 2px blue;
     display: flex;
     text-align: center;
-    justify-content: center;
     align-items: center;
 
     padding: 0px;
     margin: 20px 0 0 0;
     p {
       color: #a4a4a4;
-      width: 80px;
+      width: 40px;
       font-size: 11px;
       margin-top: 2px;
     }
-    width: 80px;
-    border-radius: 2px;
-    height: 60px;
+    width: 40px;
+    border-radius: 1px;
+    height: 70px;
   }
+}
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-label {
+  margin-top: 2px;
+  text-align: center;
+}
+
+.button1 {
+  width: 32px;
+  height: 28px;
 }

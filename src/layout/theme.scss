@@ -1,6 +1,6 @@
-@import '~react-md/src/scss/react-md';
+@import "~react-md/src/scss/react-md";
 $md-primary-color: $md-grey-800;
-$md-secondary-color: $md-red-800;
+$md-secondary-color: $md-grey-800;
 $md-tertiary-color: $md-grey-300;
 
 .main-container,
@@ -9,7 +9,7 @@ $md-tertiary-color: $md-grey-300;
 }
 
 a:link {
-  color: $md-blue-500;
+  color: $md-grey-800;
   text-decoration: none;
 }
 

@@ -14,11 +14,21 @@ import BottomNav from "../components/BottomNav";
 import TopNav from "../components/TopNav/index";
 
 const styles = {
+  fullPage: {
+    display: "flex",
+    flexDirection: "column"
+  },
   topBlank: {
-    height: "10px"
+    width: "100%",
+    height: "80px"
   },
   bottomBlank: {
+    width: "100%",
     height: "70px"
+  },
+  content: {
+    width: "100%",
+    height: "1000px"
   }
 };
 
@@ -27,12 +37,12 @@ export default class MainLayout extends React.Component {
     const { children } = this.props;
     return (
       <TopNav config={config} LocalTitle={this.props.title}>
-        <div>
+        <div style={styles.fullPage}>
           <Helmet>
             <meta name='description' content={config.siteDescription} />
           </Helmet>
           <div style={styles.topBlank} />
-          {children}
+          <div style={styles.content}>{children}</div>
           <div style={styles.bottomBlank} />
           <BottomNav />
         </div>
