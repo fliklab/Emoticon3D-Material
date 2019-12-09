@@ -1,72 +1,77 @@
-/** src/pages/index.jsx */
-import React from "react";
+import React, { Component } from "react";
+import Card from "react-md/lib/Cards/Card";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing";
-import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
+import "./Main.scss";
 
-const styles = {
-  fullPage: {
-    display: "flex",
-    flexDirection: "column"
-  },
-  topBlank: {
-    width: "100%",
-    height: "200px"
-  },
-  bottomBlank: {
-    width: "100%",
-    height: "70px"
-  },
-  content: {
-    width: "100%",
-    flex: 1
-  }
-};
-class Index extends React.Component {
+class MainPage extends Component {
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout location={this.props.location} title='Home'>
-        <div className='index-container' style={styles.content}>
-          <Helmet>
-            <title>{config.siteTitle}</title>
-            <link rel='canonical' href={`${config.siteUrl}/pageindex`} />
-          </Helmet>
-          <SEO postEdges={postEdges} />
-          <PostListing postEdges={postEdges} />
+      <div className='about-container'>
+        <Helmet>
+          <title>{`main | ${config.siteTitle}`}</title>
+          <link rel='canonical' href={`${config.siteUrl}`} />
+        </Helmet>
+        <div>
+          <Card className='md-grid md-cell--8'>
+            <img
+              src='../assets/mainicon_256x256.png'
+              className='smallbutton'
+              alt='icon'
+            />
+            <h3 className='smallbutton'>3D요</h3>
+            <div className='main-wrapper'>
+              <div className='sub-wrapper'>
+                <div className='subsub-wrapper'>
+                  <Link to='/search'>
+                    <img
+                      src='../assets/main_256x256.png'
+                      alt='icon'
+                      className='button1'
+                    />
+                    <p>모델검색</p>
+                  </Link>
+                </div>
+                <div className='subsub-wrapper'>
+                  <Link to='/reserv'>
+                    <img
+                      src='../assets/main2_256x256.png'
+                      alt='icon'
+                      className='button1'
+                    />
+                    <p>예약하기</p>
+                  </Link>
+                </div>
+              </div>
+              <div className='sub-wrapper'>
+                <div className='subsub-wrapper'>
+                  <Link to='/checkprint'>
+                    <img
+                      src='../assets/main3_256x256.png'
+                      alt='icon'
+                      className='button1'
+                    />
+                    <p>출력상태</p>
+                  </Link>
+                </div>
+                <div className='subsub-wrapper'>
+                  <Link to='/more'>
+                    <img
+                      src='../assets/Thumbnail1_256x256.png'
+                      alt='icon'
+                      className='button1'
+                    />
+                    <p>내3D모델</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
-      </Layout>
+      </div>
     );
   }
 }
-
-export default Index;
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [fields___date], order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            cover
-            date
-          }
-        }
-      }
-    }
-  }
-`;
+export default MainPage;

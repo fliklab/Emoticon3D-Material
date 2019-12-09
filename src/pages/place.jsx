@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 // import { randomImage } from "utils/random";
 
 import { Avatar, Card, CardTitle, CardText } from "react-md";
-import Layout from "../../layout";
+import Layout from "../layout";
 import config from "../../data/SiteConfig";
 
 // 태그 안에서 (예)<div style = {styles._____}> 로 지정해주면 됩니다..
@@ -102,7 +102,7 @@ class Place extends Component {
                 name='팹랩서울'
                 info1='유료∙info1'
                 info2='종로구'
-                img={`./../assets/places/place_.fablabpng`}
+                img={`./../assets/places/place_fablab.png`}
               />
               <PlaceCard
                 name='디지털대장간'
